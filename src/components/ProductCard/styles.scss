@@ -1,0 +1,115 @@
+@import '../../styles/colors.scss';
+
+.product {
+    .product_card_link {
+        width: 100%;
+    }
+    .card {
+        padding: 5px 10px;
+        position: relative;
+        .card-body {
+            padding: 10px 10px 0px 10px;
+        }
+    }
+    .side_buttons {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        button {
+            background: $orange;
+            opacity: 1;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0px solid black;
+            &:hover {
+                border: 2px solid black;
+            }
+        }
+        .compare_button {
+            margin-bottom: 10px;
+            svg, img {
+                width: 30px;
+            }
+        }
+        .star_btn {
+            svg, img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    .product_image {
+        object-fit: contain;
+        height: 250px;
+    }
+    .product_title {
+        span {
+            text-align: left;
+            text-decoration: none;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* number of lines to show */
+            line-clamp: 2; 
+            -webkit-box-orient: vertical;
+        }
+        
+    }
+    .product_subtitle {
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        flex-wrap: wrap;
+    }
+    .product_buy_button {
+        padding: 5px 24px;
+    }
+}
+@media screen and (max-width: 728px) {
+    .product {
+        .product_image {
+            height: 150px;
+        }
+        .product_title {
+            font-size: 15px
+        }
+        
+        .card-body {
+            padding: 10px 0 0 0;
+            .text-success, .text-danger {
+                font-size: 12px;
+            }
+            .product_price {
+                font-size: 15px;
+            }
+        }
+        .side_buttons { 
+            button {
+                width: 35px;
+                height: 35px;
+            }
+            .compare_button {
+                
+                border-radius: 5px;
+                svg, img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+            .star_btn {
+                svg, img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        
+    }
+}

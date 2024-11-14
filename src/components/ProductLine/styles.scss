@@ -1,0 +1,25 @@
+@import '../../styles/colors.scss';
+
+.product_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            margin: 0;
+        }
+    }
+    
+    .product_line_row {
+        width: 100%;
+    }
+    img {
+        height: 100px;
+    }
+    .product_line_quantity {
+        
+    }
+}

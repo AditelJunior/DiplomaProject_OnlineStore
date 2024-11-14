@@ -1,0 +1,42 @@
+@import '../../styles/colors.scss';
+.footer {
+    background: $black;
+    .footer_side {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        .category_block {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            // margin-bottom: 20px;
+            padding: 10px 20px;
+            border-bottom: 2px solid #fff;
+            &:nth-last-child(-n+1) {
+                border-bottom: 0px solid #fff;
+            }
+            .nav-item {
+                text-align: left;
+            }
+            .footer_nav_list {
+                width: 50%;
+                padding-left: 20px;
+                text-align: left;
+            }
+        }
+        
+        
+    }
+   
+    .navbar_logotype {
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+    }
+    .footer_nav_list {
+        margin: 0;
+    }
+}

@@ -1,0 +1,32 @@
+.product_container {
+    .card {
+        padding: 30px;
+    }
+    .product_image {
+        width: 100%;
+    }
+    .product_price {
+        font-weight: bold;
+        font-size: 22px
+    }
+    .product_info_row {
+        text-align: left;
+        div {
+            &:nth-child(2) {
+                font-weight: bold;
+            }
+        }
+        
+    }
+    .product_price {
+        margin-top: 50px;
+    }
+    .add_to_cart_button {
+        margin-top: 50px;
+    }
+    .product_description {
+        border-top: 2px solid #d3d3d3;
+        padding: 20px;
+        text-align: left;
+    }
+}

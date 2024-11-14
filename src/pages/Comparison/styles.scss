@@ -1,0 +1,72 @@
+.comparison_table_wrap {
+    overflow-x: auto;
+    .comparison_table {
+        // border: 1px solid black;
+        width: 100%;
+        background: transparent;
+        ::-webkit-scrollbar-track {
+            height: 0;
+            width: 0;
+          }
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            // display: block;
+            min-width: 200px;
+    
+        }
+        tr {
+            // display: table-cell;
+            border: 1px solid black;
+    
+        }
+        td {
+            padding: 10px;
+            // display: block;
+            border: 1px solid black;
+        }
+        .remove_compare_item_btn {
+            background: transparent;
+
+        }
+        .remove_compare_item_btn,
+        .remove_compare_item_btn:active,
+        .remove_compare_item_btn:visited {
+            border-color: black;
+            color: black;
+        }
+        .remove_compare_item_btn:hover,
+        .remove_compare_item_btn:focus {
+            background-color: black;
+            border-color: black;
+            color: white;
+        }
+
+    }
+}
+.comparison_empty_wrap {
+    padding: 100px 0;
+    p {
+        font-size: 30px;
+    }
+}
+.clear_compare_list_btn {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 728px) {
+    .comparison_table {
+        td, th {
+            font-size: 13px;
+        }
+        th {
+            min-width: 0px!important;
+        }
+    }
+    .comparison_empty_wrap {
+        padding: 100px 0;
+        p {
+            font-size: 20px;
+        }
+    }
+}

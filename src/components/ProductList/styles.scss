@@ -1,0 +1,25 @@
+@import '../../styles/colors.scss';
+.categoryHeader {
+    text-align: left;
+    text-transform: capitalize;
+    font-style: italic;
+}
+.productList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .productList {
+        grid-template-columns: repeat(3, 1fr)!important;
+        gap: 2px!important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .productList {
+        grid-template-columns: repeat(2, 1fr)!important;
+    }
+}

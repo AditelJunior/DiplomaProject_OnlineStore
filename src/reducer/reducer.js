@@ -1,5 +1,5 @@
 // import shoppingReducer from "./shopping";
-import productsLoadReducer from "./productsLoaded";
+// import productsLoadReducer from "./productsLoaded";
 import favouritesReducer from "./favourites";
 import compareReducer from "./compare";
 import { combineReducers } from "redux";
@@ -7,7 +7,7 @@ import { combineReducers } from "redux";
 const allReducers = combineReducers({
   favourites: favouritesReducer,
   // shopping: shoppingReducer,
-  productLoad: productsLoadReducer,
+  // productLoad: productsLoadReducer,
   compare: compareReducer,
 })
 

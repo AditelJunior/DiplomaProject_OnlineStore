@@ -21,7 +21,7 @@ const Pagination = (props) => {
   }, [props.category, props.categoryLevel, props.reload]);
 
   const getPageCount = async () => {
-    let count = await getCountFromServer(query(collection_ref, where(props.categoryLevel, "==", props.category), orderBy('updated_at', 'desc'))).catch(error => {console.log(error)});
+    let count = await getCountFromServer(query(collection_ref, where(props.categoryLevel, "==", props.category))).catch(error => {console.log(error)});
     setNumPages(Math.ceil(count.data().count / props.pageSize));
     setLoaded(true)
   }
@@ -64,7 +64,7 @@ const Pagination = (props) => {
                   id="prev_button"
                   disabled={currentPage === 1}
               >
-                  Назад
+                  Zpatky
               </button>
               <ul className="product_list_pagination">
                   <Thumbs />
@@ -75,7 +75,7 @@ const Pagination = (props) => {
                   id="next_button"
                   disabled={currentPage === numPages}
               >
-                  Вперед
+                  Další
               </button>
             </div> : null
         }

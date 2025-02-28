@@ -8,7 +8,7 @@ import Loader from "../../components/Loader/Loader";
 
 import "./styles.scss"
 
-import { collection, getDocs, where, limit, query, orderBy } from "firebase/firestore";
+import { collection, getDocs, where, limit, query, orderBy, doc } from "firebase/firestore";
 import db from "../../firebase";
 
 const Home = () => {
@@ -18,21 +18,21 @@ const Home = () => {
 
     useEffect(() => {
         getHomeCarouselData();
-        getCategory('rifles', 4);
-        getCategory('shotguns', 4);
-        getCategory('for_rifles', 4);
-        getCategory('for_pneumatic', 4);
-        getCategory('pepper_sprays', 4);
+        getCategory('chytre_telefony', 4);
+        getCategory('notebooky', 4);
+        getCategory('personalni_pocitace', 4);
+        getCategory('herni_pocitace', 4);
     }, [])
   
     async function getCategory(subCategory, limitation) {
       let object = {};
       const collection_ref = collection(db, 'products');
-      const q = query(collection_ref, where("subCategory", "==", subCategory), orderBy('available', 'desc'), orderBy('updated_at', 'desc'), limit(limitation));
+      const q = query(collection_ref, where("subCategory", "==", subCategory), limit(limitation));
   
       const doc_refs = await getDocs(q).catch(error => {console.log(error)});;
+      console.log(doc_refs.docs);
       object.products = doc_refs.docs.map((doc) => {
-        return { id: doc.id, ...doc.data() }
+        return {id: doc.id, ...doc.data()}
       });
       object.id = subCategory;
 
@@ -76,7 +76,7 @@ const Home = () => {
             </Carousel>
             <div className="container">
                 <h1 className="pageTitle">
-                    Наш ассортимент
+                    Naše zboží
                 </h1>
                 {isLoaded
                     ? <HomeProductList products={products}/>

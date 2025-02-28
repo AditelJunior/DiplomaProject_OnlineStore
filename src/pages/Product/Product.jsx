@@ -15,7 +15,7 @@ import { XLg } from 'react-bootstrap-icons';
 import Placeholder from "../../assets/images/placeholder.jpg";
 import { getDoc, doc } from "firebase/firestore";
 import db from "../../firebase";
-
+import { PROPS_TRANSLATION } from "./../../translations/comparisonTranslations";
 import { setProductToCompare, addProductToFavourites } from "./../../actions/productsActions";
 
 const Product = () => {
@@ -107,53 +107,59 @@ const Product = () => {
 
             {product.brand ? 
             <Row className="product_info_row">
-              <Col xs={6}>Производитель: </Col>
+              <Col xs={6}>{PROPS_TRANSLATION.brand}:</Col>
               <Col xs={6}>
                 {product.brand}
               </Col>
             </Row> : null}
             
-            {product.caliber ? 
+            {product.battery ? 
             <Row className="product_info_row">
-              <Col xs={6}>Калибр: </Col>
-              <Col xs={6}>{product.caliber}</Col>
+              <Col xs={6}>{PROPS_TRANSLATION.battery}: </Col>
+              <Col xs={6}>{product.battery}</Col>
             </Row> : null}
 
-            {product.totalLength ? 
+            {product.screen ? 
             <Row className="product_info_row">
-              <Col xs={6}>Общая длинна: </Col>
+              <Col xs={6}>{PROPS_TRANSLATION.screen}: </Col>
+              <Col xs={6}>{product.screen}</Col>
+            </Row> : null}
+
+            {product.capacity ? 
+            <Row className="product_info_row">
+              <Col xs={6}>{PROPS_TRANSLATION.capacity}: </Col>
               <Col xs={6}>
-              {product.totalLength}
+              {product.capacity}
               </Col>
             </Row> : null}
             
-            {product.barrelLength ? 
+            {product.energyClass ? 
             <Row className="product_info_row">
-              <Col xs={6}>Длинна ствола: </Col>
+              <Col xs={6}>{PROPS_TRANSLATION.energyClass}: </Col>
               <Col xs={6}>
-                {product.barrelLength}
+                {product.energyClass}
               </Col>
             </Row> : null}
 
             {product.weight ? 
             <Row className="product_info_row">
-              <Col xs={6}>Вес: </Col>
+              <Col xs={6}>{PROPS_TRANSLATION.weight}: </Col>
               <Col xs={6}>
               {product.weight}
               </Col>
             </Row> : null}
 
-            {product.weight ? 
+            {product.ram ? 
             <Row className="product_info_row">
-              <Col xs={6}>Размер магазина: </Col>
+              <Col xs={6}>{PROPS_TRANSLATION.ram}: </Col>
               <Col xs={6}>
-              {product.magazineSize}
+              {product.ram}
               </Col>
             </Row> : null}
 
             <Row className="product_info_row">
               <Col xs={6}>
-                Состояние:
+                {PROPS_TRANSLATION.used}:
               </Col>
               {product.used ? 
               <Col xs={6} className="text-danger">Б/У
@@ -164,12 +170,12 @@ const Product = () => {
 
             <Row className="product_info_row">
               <Col xs={6}>
-                Доступность:
+              {PROPS_TRANSLATION.available}:
               </Col>
               {product.available ? 
-              <Col xs={6} className="text-success">Есть в наличии
+              <Col xs={6} className="text-success">ANO
               </Col> : 
-              <Col xs={6} className="text-danger">Нет в наличии
+              <Col xs={6} className="text-danger">NE
               </Col>}
             </Row> 
 

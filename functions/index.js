@@ -9,7 +9,7 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
 
-const propertiesForSearch = ['title', 'brand', 'caliber', 'origin'];
+const propertiesForSearch = ['title', 'brand', 'origin'];
 
 exports.updateSearchQueries = functions.region('europe-west3').firestore.document('products/{productId}')
     .onUpdate((change) => {

@@ -21,7 +21,7 @@ const MainCategory = () => {
   const [isLoaded, setLoaded] = useState(false);
   const [lastVisible, setLastVisible] = useState();
   const [firstVisible, setFirstVisible] = useState();
-  const [filterSetting, setFilterSetting] = useState({filter:'updated_at',order: 'desc'})
+  const [filterSetting, setFilterSetting] = useState({filter:'title',order: 'asc'})
 
   const navigate = useNavigate();
 

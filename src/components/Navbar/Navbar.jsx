@@ -38,16 +38,16 @@ const Navigation = () => {
         <Link to="/" className="navbar_logotype navbar_logotype_desktop">
           <Navbar.Brand> 
             {/* <img src={Logo}/> */}
-            <span>Арсенал Центр</span>
+            <span>VseProElektroniku</span>
             </Navbar.Brand>
         </Link>
         <div className="d-flex wrap_special_nav_items">
           <Link className="nav-item nav-link nav-item-with_bubble hide_on_mobile" to="/favourite">
-            Избранное
+            Oblibené
             {favouritesList ? <span className="bubble">{favouritesList.length}</span> : null}
           </Link>
           <Link className="nav-item nav-link nav-item-with_bubble hide_on_mobile" to="/comparison">
-            Сравнение
+            Porovnání
             {itemsToCompare ? <span className="bubble">{itemsToCompare.length}</span> : null}
           </Link>
         </div>
@@ -55,20 +55,20 @@ const Navigation = () => {
         <Form className="d-flex" onSubmit={(event) => searchSubmit(event)}>
           <Form.Control
             type="search"
-            placeholder="Введите название..."
+            placeholder="Co hledáte?"
             className="me-2"
             aria-label="Поиск"
             onChange={(e) => searchChange(e)}
           />
           <Button variant="danger" type="submit">
-            Поиск
+            Hledat
           </Button>
         </Form>
       </div>
 
       <Container>
         <Link to="/" className="navbar_logotype navbar_logotype_mobile">
-          <Navbar.Brand>Arsenal Center</Navbar.Brand>
+          <Navbar.Brand>VseProElektroniku</Navbar.Brand>
         </Link>
         <Navbar.Toggle
           className="navbar_toggler_button"
@@ -113,17 +113,16 @@ const Navigation = () => {
               );
             })}
             <Link className="nav-item nav-link nav-item-with_bubble hide_on_desktop" to="/favourite">
-              Избранное
+              Oblibené
               {favouritesList ? <span className="bubble">{favouritesList.length}</span> : null}
             </Link>
             <Link className="nav-item nav-link nav-item-with_bubble hide_on_desktop" to="/comparison">
-              Сравнение
+              Porovnání
               {itemsToCompare ? <span className="bubble">{itemsToCompare.length}</span> : null}
             </Link>
             <Link className="nav-item nav-link" to="/about">
-              Контакты
+              Kontakty
             </Link>
-            
           </Nav>
         </Navbar.Collapse>
       </Container>

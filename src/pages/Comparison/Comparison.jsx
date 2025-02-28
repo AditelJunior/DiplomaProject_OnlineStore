@@ -42,7 +42,7 @@ const Home = () => {
 
     return (
         <div className="container">
-            <h1 className="pageTitle">Сравнить</h1>
+            <h1 className="pageTitle">Porovnaní</h1>
             {
                 itemsToCompare.length > 0 ?
             <div>
@@ -85,11 +85,11 @@ const Home = () => {
                                                         // IF PROPERTY RETURNS BOOLEAN
                                                         switch(property) {
                                                             case 'available':
-                                                                return <td key={i}>{product[property] ? 'Есть в наличии' : 'Нет в наличии'}</td>;
+                                                                return <td key={i}>{product[property] ? 'Ano' : 'Ne'}</td>;
                                                             case 'used':
-                                                                return <td key={i}>{product[property] ? 'Б/У' : 'Новый'}</td>;
+                                                                return <td key={i}>{product[property] ? 'Použitý' : 'Nový'}</td>;
                                                             default:
-                                                                return <td key={i}>{product[property] ? 'Да' : 'Нет'}</td>
+                                                                return <td key={i}>{product[property] ? 'Ano' : 'Ne'}</td>
 
 
                                                         }

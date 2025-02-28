@@ -7,30 +7,28 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDFuyFdeSsGzKz9cfVBxRIdma_O_9wIta8",
-  authDomain: "arsenal-center.firebaseapp.com",
-  databaseURL: "https://arsenal-center-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "arsenal-center",
-  storageBucket: "arsenal-center.appspot.com",
-  messagingSenderId: "503474611964",
-  appId: "1:503474611964:web:5b0909539c145e495e1979",
-  measurementId: "G-B8878QBXG5"
+  apiKey: "AIzaSyBCn2eCQJCCjbSBj01syJbQGxOb5OrU_co",
+  authDomain: "elektronika-cz.firebaseapp.com",
+  projectId: "elektronika-cz",
+  storageBucket: "elektronika-cz.firebasestorage.app",
+  messagingSenderId: "306673771823",
+  appId: "1:306673771823:web:d62ec2c573436c976dadda",
+  measurementId: "G-SH0V4HGXTZ"
 };
-
 // Initialize Firebase Auth provider
 const provider = new GoogleAuthProvider();
   
 // whenever a user interacts with the provider, we force them to select an account
-provider.setCustomParameters({   
-    prompt : "select_account "
-});
+// provider.setCustomParameters({   
+//     prompt : "select_account "
+// });
 
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const storage = initializeApp.storage;
-const db = getFirestore(app);
+export const storage = initializeApp.storage;
+export const db = getFirestore(app);
 
 // if (process.env.NODE_ENV === 'development') {
 //   const functions = getFunctions(app);

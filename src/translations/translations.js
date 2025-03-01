@@ -7,7 +7,7 @@ export const CATEGORIES_TRANSLATION = {
 
 export const SUB_CATEGORIES_TRANSLATION = {
     // Telefony
-    chytre_telefony: 'Chytre telefony',
+    chytre_telefony: 'Chytré telefony',
     tlacitkove_telefony: 'Tlačítkové telefony',
     
     // Velké spotřebiče
@@ -17,11 +17,6 @@ export const SUB_CATEGORIES_TRANSLATION = {
 
     // Počítače
     notebooky: 'Notebooky',
-    personalni_pocitace: 'Personalní počítače',
+    personalni_pocitace: 'Personální počítače',
     herni_pocitace: 'Herní počítače',
-
-    // Protection
-    pepper_sprays: 'Перцовые балончики',
-    stun_guns: 'Электрошокеры',
-    rest_protection: 'Остальные средства защиты',
 }

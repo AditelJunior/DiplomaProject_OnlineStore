@@ -35,14 +35,14 @@ const Home = () => {
     
 
     const handleClearCompareList = () => {
-        if (window.confirm("Вы уверены что хотите очистить список для сравнения?")) {
+        if (window.confirm("Jste si jisti, že chcete vyčistit seznam pro porovnání?")) {
             dispatch(clearCompareList())
         }
     }
 
     return (
         <div className="container">
-            <h1 className="pageTitle">Porovnaní</h1>
+            <h1 className="pageTitle">Srovnání</h1>
             {
                 itemsToCompare.length > 0 ?
             <div>
@@ -110,11 +110,11 @@ const Home = () => {
                 <Button 
                     variant="danger" 
                     onClick={(e)=> handleClearCompareList()}
-                    className="clear_compare_list_btn">Очистить список</Button>  
+                    className="clear_compare_list_btn">Vyčistit seznam</Button>  
             </div>
             :
             <div className="comparison_empty_wrap">
-                <p>Добавьте товары для сравнения.</p>
+                <p>Přidejte zboží k porovnání.</p>
             </div>
         }
         </div>

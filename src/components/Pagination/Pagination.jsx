@@ -1,10 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
-import { useParams } from "react-router-dom";
+// import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+// import { useParams } from "react-router-dom";
 import "./styles.scss";
 
-import {collection, where, orderBy, query, getCountFromServer} from "firebase/firestore";
+import {collection, where, query, getCountFromServer} from "firebase/firestore";
 import db from "../../firebase";
 
 const Pagination = (props) => {
@@ -27,9 +27,9 @@ const Pagination = (props) => {
   }
 
   const paginate = (direction) => {
-    if (direction == 'next') {
+    if (direction === 'next') {
         setCurrentPage(currentPage + 1);
-    } else if (direction == 'prev') {
+    } else if (direction === 'prev') {
         setCurrentPage(currentPage - 1);
     }
     props.setter(direction);

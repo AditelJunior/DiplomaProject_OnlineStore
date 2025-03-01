@@ -8,7 +8,7 @@ const Home = () => {
     const favouritesList = useSelector(state => state.favourites.favouriteProducts);
     return (
         <div className="container">
-            <h1 className="pageTitle">Избранное</h1>
+            <h1 className="pageTitle">Oblíbené</h1>
             <ProductList products={favouritesList}/>
         </div>
     )

@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.aa300fc8.css",
-    "main.js": "/static/js/main.c84cc34e.js",
+    "main.js": "/static/js/main.dd90dcdf.js",
     "index.html": "/index.html",
     "static/media/balance_icon.svg": "/static/media/balance_icon.8aa673a330fb33ff1f0f91c3f920c43f.svg",
     "static/media/balance_icon_dark.svg": "/static/media/balance_icon_dark.830cd94152b08992f5e6aa58a315d2fb.svg",
     "static/media/star-fill-black.svg": "/static/media/star-fill-black.6ed5e774494a999de69d40da43d26e7b.svg",
     "static/media/star-fill.svg": "/static/media/star-fill.9123125c5d44358506c4b6cb11543743.svg",
     "main.aa300fc8.css.map": "/static/css/main.aa300fc8.css.map",
-    "main.c84cc34e.js.map": "/static/js/main.c84cc34e.js.map"
+    "main.dd90dcdf.js.map": "/static/js/main.dd90dcdf.js.map"
   },
   "entrypoints": [
     "static/css/main.aa300fc8.css",
-    "static/js/main.c84cc34e.js"
+    "static/js/main.dd90dcdf.js"
   ]
 }

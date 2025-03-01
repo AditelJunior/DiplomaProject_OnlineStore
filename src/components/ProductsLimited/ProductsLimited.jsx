@@ -29,7 +29,7 @@ const ProductsLimited = (props) => {
       <Link
         to={"/" + mainCategory + "/" + category.id}
         className="load_more btn btn-outline-primary">
-        Загрузить больше
+        Zobrazit více
       </Link>
     </div>
   );

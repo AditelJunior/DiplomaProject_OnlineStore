@@ -58,8 +58,8 @@ const ProductCard = (props) => {
               </span>
             </Card.Title>
             <Card.Subtitle className="product_subtitle mb-2 text-muted">
-              {product.available ? <span className="text-success">Есть в наличии</span> : <span className="text-danger">Нет в наличии</span>}
-              <b className="product_price">{product.price}&nbsp;<span>{product.currency === 'usd' ? "$" : 'сом'}</span></b>
+              {product.available ? <span className="text-success">Je v prodejí</span> : <span className="text-danger">Není v prodejí</span>}
+              <b className="product_price">{product.price}&nbsp;<span>CZK</span></b>
             </Card.Subtitle>
           </Card.Body>
         </Card>

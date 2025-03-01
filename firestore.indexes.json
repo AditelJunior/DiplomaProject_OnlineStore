@@ -10,60 +10,6 @@
         },
         {
           "fieldPath": "available",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "price",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "category",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "price",
-          "order": "DESCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "category",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "updated_at",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "category",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
           "order": "DESCENDING"
         },
         {
@@ -102,246 +48,116 @@
           "fieldPath": "available",
           "order": "DESCENDING"
         },
-        {
-          "fieldPath": "updated_at",
-          "order": "DESCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "category",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "updated_at",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "category",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "updated_at",
-          "order": "DESCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "subCategory",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "price",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "subCategory",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "price",
-          "order": "DESCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "subCategory",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "updated_at",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "subCategory",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "updated_at",
-          "order": "DESCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "subCategory",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
-          "order": "DESCENDING"
-        },
-        {
-          "fieldPath": "price",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "subCategory",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
-          "order": "DESCENDING"
-        },
-        {
-          "fieldPath": "price",
-          "order": "DESCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "subCategory",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
-          "order": "DESCENDING"
-        },
-        {
-          "fieldPath": "updated_at",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "subCategory",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "available",
-          "order": "DESCENDING"
-        },
-        {
-          "fieldPath": "updated_at",
-          "order": "DESCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "subCategory",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "updated_at",
-          "order": "ASCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
-        {
-          "fieldPath": "subCategory",
-          "order": "ASCENDING"
-        },
-        {
-          "fieldPath": "updated_at",
-          "order": "DESCENDING"
-        }
-      ]
-    },
-    {
-      "collectionGroup": "products",
-      "queryScope": "COLLECTION",
-      "fields": [
         {
           "fieldPath": "title",
           "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "products",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "category",
+          "order": "ASCENDING"
         },
         {
           "fieldPath": "available",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "title",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "products",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "subCategory",
           "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "available",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "price",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "products",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "subCategory",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "available",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "price",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "products",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "subCategory",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "available",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "title",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "products",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "subCategory",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "available",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "title",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "products",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "subCategory",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "updated_at",
+          "order": "DESCENDING"
         }
       ]
     }
   ],
-  "fieldOverrides": [
-    {
-      "collectionGroup": "products",
-      "fieldPath": "title",
-      "ttl": false,
-      "indexes": [
-        {
-          "order": "ASCENDING",
-          "queryScope": "COLLECTION"
-        },
-        {
-          "order": "DESCENDING",
-          "queryScope": "COLLECTION"
-        },
-        {
-          "arrayConfig": "CONTAINS",
-          "queryScope": "COLLECTION"
-        }
-      ]
-    }
-  ]
+  "fieldOverrides": []
 }

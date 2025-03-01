@@ -1,9 +1,9 @@
 import React from "react";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { removeProductFromCompare } from "./../../actions/productsActions";
-import { Trash, DashLg } from 'react-bootstrap-icons';
+import { Trash } from 'react-bootstrap-icons';
 import BalanceIcon from "../../assets/icons/balance_icon.svg";
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom'
@@ -29,9 +29,9 @@ const CompareWidget = () => {
                 <div className="compare_widget_top">
                     <button className="load_more btn btn-outline-primary" onClick={() => {hideWidget ? setHideWidget(false) : setHideWidget(true)}}>{hideWidget ? <img src={BalanceIcon} alt=""/> : '—'} </button>
                 </div>
-                <span className="compare_widget_heading">Товары для сравнения:</span>
+                <span className="compare_widget_heading">Zboží k porovnání:</span>
                 <div className="d-flex compare_list">{renderArr}</div>
-                {renderArr.length >1 ? <Link className="load_more btn btn-outline-primary" to={'/comparison'}>Смотреть сравнение</Link> : null}
+                {renderArr.length >1 ? <Link className="load_more btn btn-outline-primary" to={'/comparison'}>Zobrazit porovnání</Link> : null}
             </div>)
     } else {
         return null

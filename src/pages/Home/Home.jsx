@@ -7,17 +7,18 @@ import HomeProductList from "../../components/HomeProductList/HomeProductList";
 import Loader from "../../components/Loader/Loader";
 
 import "./styles.scss"
-
-import { collection, getDocs, where, limit, query, orderBy, doc } from "firebase/firestore";
+import Slider1 from "./../../assets/images/slider_1.jpg";
+import Slider2 from "./../../assets/images/slider_2.jpg";
+import { collection, getDocs, where, limit, query } from "firebase/firestore";
 import db from "../../firebase";
 
 const Home = () => {
-    const [carouselData, setCarouselData] = useState([]);
+    // const [carouselData, setCarouselData] = useState([]);
     const [products, setProducts] = useState([]);
     const [isLoaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        getHomeCarouselData();
+        // getHomeCarouselData();
         getCategory('chytre_telefony', 4);
         getCategory('notebooky', 4);
         getCategory('personalni_pocitace', 4);
@@ -29,8 +30,7 @@ const Home = () => {
       const collection_ref = collection(db, 'products');
       const q = query(collection_ref, where("subCategory", "==", subCategory), limit(limitation));
   
-      const doc_refs = await getDocs(q).catch(error => {console.log(error)});;
-      console.log(doc_refs.docs);
+      const doc_refs = await getDocs(q).catch(error => {console.log(error)});
       object.products = doc_refs.docs.map((doc) => {
         return {id: doc.id, ...doc.data()}
       });
@@ -39,40 +39,49 @@ const Home = () => {
       setProducts(current => [...current, object]);
       setLoaded(true);
     }
-    async function getHomeCarouselData() {
-        let docsArray = [];
-        const collection_ref = collection(db, 'home_carousel');
-        const doc_refs = await getDocs(collection_ref).catch(error => {console.log(error)});;
-        doc_refs.docs.map((doc) => {
-            return docsArray.push(doc.data());
-        })
-        setCarouselData(docsArray.sort((a,b) => a.order - b.order));
-    }
+    // async function getHomeCarouselData() {
+    //     let docsArray = [];
+    //     const collection_ref = collection(db, 'home_carousel');
+    //     const doc_refs = await getDocs(collection_ref).catch(error => {console.log(error)});;
+    //     doc_refs.docs.map((doc) => {
+    //         return docsArray.push(doc.data());
+    //     })
+    //     setCarouselData(docsArray.sort((a,b) => a.order - b.order));
+    // }
     return (
         <div className="home_container">
             <Carousel data-bs-theme="dark" interval={null}>
-                {
-                    carouselData.map((carouselItem, i) => {
-                        return (
-                            <Carousel.Item key={i}>
-                                <img
-                                    className="d-block w-100 carousel_img"
-                                    src={carouselItem.image[0].downloadURL}
-                                    alt={'Slide number ' + carouselItem.order}
-                                />
-                                {
-                                carouselItem.title && carouselItem.content ?
-                                <Carousel.Caption>
-                                    <div className="carousel_text_block">
-                                        <h2>{carouselItem.title}</h2>
-                                        <p>{carouselItem.content}</p>
-                                    </div>
-                                </Carousel.Caption> : null
-                                }
-                            </Carousel.Item>
-                        )
-                    })
-                }
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 carousel_img"
+                        src={Slider1}
+                        alt={'Slide number 1'}
+                    />
+                    <Carousel.Caption>
+                        <div className="carousel_text_block">
+                            <h2>Kontakty</h2>
+                            <p>Praha, Česká republika,<br/>                                
+                            110 00, Vodičkova 701/31<br/> 
+                            +420 (551) 12 34 56<br/> 
+                            +420 (703) 12 34 56<br/> 
+                            +420 (779) 12 34 56</p>
+                        </div>
+                    </Carousel.Caption> 
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 carousel_img"
+                        src={Slider2}
+                        alt={'Slide number 1'}
+                    />
+                    <Carousel.Caption>
+                        <div className="carousel_text_block">
+                            <h2>Pracovní doba</h2>
+                            <p>Pondelí - Pátek <br/> 
+                            9:00 - 18:00</p>
+                        </div>
+                    </Carousel.Caption> 
+                </Carousel.Item>
             </Carousel>
             <div className="container">
                 <h1 className="pageTitle">

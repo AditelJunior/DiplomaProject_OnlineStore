@@ -103,7 +103,7 @@ const Product = () => {
               </Col>
             </Row> : null}
 
-            <h2 className="">Характеристики:</h2>
+            <h2 className="">Specifikace:</h2>
 
             {product.brand ? 
             <Row className="product_info_row">
@@ -162,9 +162,9 @@ const Product = () => {
                 {PROPS_TRANSLATION.used}:
               </Col>
               {product.used ? 
-              <Col xs={6} className="text-danger">Б/У
+              <Col xs={6} className="text-danger">Použitý
               </Col> : 
-              <Col xs={6} className="text-success">Новый
+              <Col xs={6} className="text-success">Nový
               </Col>}
             </Row>
 
@@ -173,15 +173,15 @@ const Product = () => {
               {PROPS_TRANSLATION.available}:
               </Col>
               {product.available ? 
-              <Col xs={6} className="text-success">ANO
+              <Col xs={6} className="text-success">Ano
               </Col> : 
-              <Col xs={6} className="text-danger">NE
+              <Col xs={6} className="text-danger">Ne
               </Col>}
             </Row> 
 
             <Row className="product_buttons_row">
-              <Button className="add_to_cart_button" variant={favouritesList.find(item => item.id === product.id) ? "secondary" : "dark" } size="lg" onClick={(e)=> addToFavourites(e, product)}>Добавить в избранное</Button>
-              <Button className="add_to_cart_button" variant={itemsToCompare.find(item => item.id === product.id) ? "secondary" : "dark" } size="lg" onClick={(e)=> addToCompare(e, product)}>Сравнить</Button>
+              <Button className="add_to_cart_button" variant={favouritesList.find(item => item.id === product.id) ? "secondary" : "dark" } size="lg" onClick={(e)=> addToFavourites(e, product)}>Přidat do oblíbených</Button>
+              <Button className="add_to_cart_button" variant={itemsToCompare.find(item => item.id === product.id) ? "secondary" : "dark" } size="lg" onClick={(e)=> addToCompare(e, product)}>Porovnat</Button>
             </Row>
           </Col>
         </Row>
@@ -189,7 +189,7 @@ const Product = () => {
       {activeModalImage ? <ImageModal source={activeModalImage} changeActiveModalImage={closeImageModal}/> : null}
     </div>
   ) : (
-    <b>Loading...</b>
+    <b>Načítání...</b>
   );
 };
 

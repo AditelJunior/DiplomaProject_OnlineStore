@@ -38,14 +38,13 @@ const Search = () => {
   };
   const NoResults = () => {
     return (
-      <h2>Нет результатов</h2>
+      <h2>Žádné výsledky</h2>
     )
   }
   return (
     <div className="container">
-      <h1 className="pageTitle">Результаты поиска</h1>
-      {isLoaded ? ( searchResults.length ? <ProductList products={searchResults}/> :  <NoResults/>) : <span>Loading</span> }
-      
+      <h1 className="pageTitle">Výsledky hledání</h1>
+      {isLoaded ? ( searchResults.length ? <ProductList products={searchResults}/> :  <NoResults/>) : <span>Načítání</span> }
     </div>
   );
 };

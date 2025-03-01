@@ -1,7 +1,5 @@
 import React from "react";
 
-import { useState, useEffect } from "react";
-
 import Form from 'react-bootstrap/Form';
 import Stack from 'react-bootstrap/Stack';
 import "./styles.scss";
@@ -30,8 +28,8 @@ const Filters = ({handleFilterState}) => {
             case 'price_high_first':
                 obj.filter = 'price'
                 obj.order = 'desc';
-            default:
                 break;
+            default:
         }
         return obj
     }
@@ -39,14 +37,14 @@ const Filters = ({handleFilterState}) => {
         <div className="d-flex justify-content-left filter_wrap">
             <Stack direction="horizontal" gap={5}>
                 <div className="">
-                    <span>Сортировать по: </span>
+                    <span>Řadit podle: </span>
                 </div>
                 <div className="">
                     <Form.Select aria-label="Default select example" onChange={e => handleFilterState(filterChange(e.target.value))}>
-                        <option value="title_a_z">Alphabetta A-Z</option>
-                        <option value="title_z_a">Alphabetta Z-A</option>
-                        <option value="price_low_first">Цене, от низкого</option>
-                        <option value="price_high_first">Цене, от высокого</option>
+                        <option value="title_a_z">Abecedy A-Z</option>
+                        <option value="title_z_a">Abecedy Z-A</option>
+                        <option value="price_low_first">Ceny, od nejnižší</option>
+                        <option value="price_high_first">Цене, od nejvyšší</option>
                         {/* <option value="a_to_z">Алфавит</option> */}
                     </Form.Select>
                 </div>

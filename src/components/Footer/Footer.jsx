@@ -5,7 +5,6 @@ import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 import {
   Instagram,
-  Whatsapp,
   TelephoneFill,
   GeoAltFill,
   EnvelopeFill,
@@ -23,31 +22,31 @@ const Footer = () => {
               <Row>
                 <Col className="list-unstyled contacts">
                   <Link to="/" className="navbar_logotype">
-                    <h2>Arsenal Center</h2>
+                    <h2>Elektronika CZ</h2>
                   </Link>
                   <p>
-                    <TelephoneFill /> +996 (551) 97 73 82
+                    <TelephoneFill /> +420 (551) 12 34 56
                   </p>
                   <p>
-                    <TelephoneFill /> +996 (703) 43 44 14
+                    <TelephoneFill /> +420 (703) 12 34 56
                   </p>
                   <p>
-                    <TelephoneFill /> +996 (779) 20 00 10
+                    <TelephoneFill /> +420 (779) 12 34 56
                   </p>
                   <p>
-                    <EnvelopeFill /> arsenalcentrecompany@gmail.com
+                    <EnvelopeFill /> elektronika_cz@seznam.cz
                   </p>
                   <p>
                     <a
                       className="nav-link"
-                      href="https://www.instagram.com/arsenalcentre_kg/"
+                      href="https://www.google.com/"
                       target="_blank"
                     >
-                      <Instagram /> @arsenalcentre_kg
+                      <Instagram /> @elektronika_cz
                     </a>
                   </p>
                   <p>
-                    <GeoAltFill /> Bishkek, Salieva street, 145A
+                    <GeoAltFill />Praha, Česká republika, 110 00, Vodičkova 701/31
                   </p>
                 </Col>
               </Row>
@@ -90,7 +89,7 @@ const Footer = () => {
         </section>
       </div>
       <div className="text-center p-3">
-        © 2024 Copyright: <p className="text-white">Adilet Aitmatov</p>
+        © 2025 Vývojář: <a target="_blank" href="https://www.linkedin.com/in/adilet-aitmatov/" className="text-white">Adilet Aitmatov</a>
       </div>
     </footer>
   );

@@ -1,6 +1,6 @@
 .home_container  {
     .carousel {
-        height: 600px;
+        height: calc(100vh - 224px);
         &:hover {
             .carousel-caption {
                 bottom: 0;
@@ -9,7 +9,7 @@
         }
         .carousel_img {
             width: 100%;
-            height: 600px;
+            height: calc(100vh - 224px);
             object-fit: cover;
         }
         
@@ -38,11 +38,22 @@
         }
     }
 }
+@media screen and (max-width: 992px) {
+    .home_container {
+        .carousel {
+            height: calc(100vh - 204px);
+            .carousel_img {
+                height: calc(100vh - 204px);
+            }
+        }
+    }
+}
 @media screen and (max-width: 728px) {
     .home_container {
         .carousel {
+            height: calc(100vh - 174px);
             .carousel_img {
-                height: 500px;
+                height: calc(100vh - 174px);
             }
             .carousel-caption {
                 bottom: 0%;

@@ -16,11 +16,12 @@ import Placeholder from "../../assets/images/placeholder.jpg";
 import { getDoc, doc } from "firebase/firestore";
 import db from "../../firebase";
 import { PROPS_TRANSLATION } from "./../../translations/comparisonTranslations";
-import { setProductToCompare, addProductToFavourites } from "./../../actions/productsActions";
+import { setProductToCompare, addProductToFavourites, addToCart } from "./../../actions/productsActions";
 
 const Product = () => {
   const favouritesList = useSelector(state => state.favourites.favouriteProducts);
   const itemsToCompare = useSelector(state => state.compare.productsToCompare);
+  const cartProducts = useSelector(state => state.cart.cartProducts);
 
   const { productId } = useParams();
   const [product, setProduct] = useState({});
@@ -46,6 +47,10 @@ const Product = () => {
   const addToFavourites = (e, product) => {
     e.preventDefault();
     dispatch(addProductToFavourites(product));
+  }
+  const moveToCart = (e, product) => {
+    e.preventDefault();
+    dispatch(addToCart(product));
   }
   const setActiveImage = (image) => {
     setActiveModalImage(image);
@@ -97,9 +102,9 @@ const Product = () => {
           <Col xs={12} md={4} className="product_content_wrap product_content_right">
           {product.price ? 
             <Row className="product_info_row product_price">
-              <Col xs={6}>Цена: </Col>
+              <Col xs={6}>Cena: </Col>
               <Col xs={6} className="">
-                {product.price} {product.currency}
+                {product.price} Kč
               </Col>
             </Row> : null}
 
@@ -182,6 +187,7 @@ const Product = () => {
             <Row className="product_buttons_row">
               <Button className="add_to_cart_button" variant={favouritesList.find(item => item.id === product.id) ? "secondary" : "dark" } size="lg" onClick={(e)=> addToFavourites(e, product)}>Přidat do oblíbených</Button>
               <Button className="add_to_cart_button" variant={itemsToCompare.find(item => item.id === product.id) ? "secondary" : "dark" } size="lg" onClick={(e)=> addToCompare(e, product)}>Porovnat</Button>
+              <Button className="add_to_cart_button" variant={cartProducts.find(item => item.id === product.id) ? "secondary" : "dark" } size="lg" onClick={(e)=> moveToCart(e, product)}>Přidat do košíku</Button>
             </Row>
           </Col>
         </Row>

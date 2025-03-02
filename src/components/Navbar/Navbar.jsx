@@ -19,6 +19,7 @@ const Navigation = () => {
 
   const favouritesList = useSelector(state => state.favourites.favouriteProducts);
   const itemsToCompare = useSelector(state => state.compare.productsToCompare);
+  const cartLength = useSelector(state => state.cart.cartProducts.length);
 
   const searchChange = (e) => {
     setSearchQuery(e.target.value);
@@ -49,6 +50,10 @@ const Navigation = () => {
           <Link className="nav-item nav-link nav-item-with_bubble hide_on_mobile" to="/comparison">
             Porovnání
             {itemsToCompare ? <span className="bubble">{itemsToCompare.length}</span> : null}
+          </Link>
+          <Link className="nav-item nav-link nav-item-with_bubble hide_on_mobile" to="/cart">
+            Cart
+            {itemsToCompare ? <span className="bubble">{cartLength}</span> : null}
           </Link>
         </div>
         

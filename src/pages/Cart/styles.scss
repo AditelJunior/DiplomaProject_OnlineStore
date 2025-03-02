@@ -1,5 +1,23 @@
-.productList {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+.cart_container {
+    .productList {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    .list-group {
+        margin-bottom: 20px;
+    }
+    .total_price {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight:bold;
+    }
+    .cart_buttons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        div {
+            margin-bottom: 10px;
+        }
+    }
 }

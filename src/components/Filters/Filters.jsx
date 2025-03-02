@@ -44,7 +44,7 @@ const Filters = ({handleFilterState}) => {
                         <option value="title_a_z">Abecedy A-Z</option>
                         <option value="title_z_a">Abecedy Z-A</option>
                         <option value="price_low_first">Ceny, od nejnižší</option>
-                        <option value="price_high_first">Цене, od nejvyšší</option>
+                        <option value="price_high_first">Ceny, od nejvyšší</option>
                         {/* <option value="a_to_z">Алфавит</option> */}
                     </Form.Select>
                 </div>

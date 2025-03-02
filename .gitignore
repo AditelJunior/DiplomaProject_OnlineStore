@@ -2,3 +2,8 @@ node_modules
 .*
 
 .history/*
+.vscode/*
+.firebase/*
+
+ui-debug.log
+build/

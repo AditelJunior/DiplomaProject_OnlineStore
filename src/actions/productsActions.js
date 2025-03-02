@@ -44,3 +44,35 @@ export const clearFavouriteList = (product) => {
         product
     }
 }
+
+
+// CART ACTIONS
+export const addToCart = (product) => {
+    return {
+        type: "ADD_PRODUCT_TO_CART",
+        product
+    }
+}
+export const removeFromCart = (product) => {
+    return {
+        type: "REMOVE_PRODUCT_FROM_CART",
+        product
+    }
+}
+export const decreaseProduct = (index) => {
+    return {
+        type: "DECREASE_PRODUCT",
+        index
+    }
+}
+export const increaseProduct = (index) => {
+    return {
+        type: "INCREASE_PRODUCT",
+        index
+    }
+}
+export const clearCartList = () => {
+    return {
+        type: "CLEAR_CART_LIST",
+    }
+}

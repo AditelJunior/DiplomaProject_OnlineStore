@@ -1,10 +1,8 @@
 import React from "react";
 import {
-  addToCart,
-  removeFromCart,
   decreaseProduct,
   increaseProduct,
-} from "../../actions/cartActions";
+} from "../../actions/productsActions";
 import { useDispatch } from "react-redux";
 import "./styles.scss";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -16,7 +14,17 @@ import { Link } from "react-router-dom";
 
 const ProductLine = (props) => {
   const item = props.item;
+  console.log(props.index);
   const dispatch = useDispatch();
+
+  const decreaseProductCart = (e, index) => {
+      e.preventDefault();
+      dispatch(decreaseProduct(index));
+  }
+  const increaseProductCart = (e, index) => {
+    e.preventDefault();
+    dispatch(increaseProduct(index));
+}
   return (
     <ListGroup.Item as="li" className="product_line">
       <Row className="product_line_row">
@@ -27,11 +35,11 @@ const ProductLine = (props) => {
           <p>{item.title}</p>
         </Col>
         <Col xs={1}>
-          <b>{item.price}$</b>
+          <b>{item.price}Kč</b>
         </Col>
         <Col xs={2} className="product_line_quantity">
           <Button
-            onClick={() => dispatch(increaseProduct(item))}
+            onClick={(e) => increaseProductCart(e, props.index)}
             variant="outline-success"
             size="sm"
           >
@@ -39,7 +47,7 @@ const ProductLine = (props) => {
           </Button>
           <p>{item.quantity}</p>
           <Button
-            onClick={() => dispatch(decreaseProduct(item))}
+            onClick={(e) => decreaseProductCart(e, props.index)}
             variant="outline-danger"
             size="sm"
           >
@@ -48,21 +56,7 @@ const ProductLine = (props) => {
         </Col>
       </Row>
     </ListGroup.Item>
-    // <li className="product">
-
-    // {/* <Link to={`/product/${item.id}`}> */}
-
-    //         {/* <Card>
-    //         <Card.Img className="product_image" variant="top" src={item.image} />
-    //         <Card.Body>
-    //             <Card.Title className="product_title">{item.title}</Card.Title>
-    //             <Card.Subtitle className="product_subtitle mb-2 text-muted"><b>{item.price}$</b></Card.Subtitle>
-
-    //             <Button onClick={dispatch(addToCart(item))} className="product_buy_button btn btn-danger">Add To Cart</Button>
-    //         </Card.Body>
-    //         </Card>    */}
-    //     {/* </Link> */}
-    // {/* </li> */}
+    
   );
 };
 

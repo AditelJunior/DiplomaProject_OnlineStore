@@ -1,11 +1,10 @@
 import { createStore } from 'redux'
 import allReducers from '../reducer/reducer';
 
-window.onbeforeunload = function(e) {
+window.onbeforeunload = function() {
   const cartState = store.getState().cart || [];
   const compareState = store.getState().compare;
   const favouritesState = store.getState().favourites;
-  // const productLoadState = store.getState().productLoad;
 
   localStorage.setItem(
     'cartStorage',

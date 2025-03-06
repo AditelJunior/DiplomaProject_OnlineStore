@@ -1,13 +1,11 @@
 const localState = JSON.parse(localStorage.getItem('favouritesStorage'));
-
 const initialState = {
     favouriteProducts: localState ? localState.favouriteProducts : [],
 };
 
 const favouritesReducer = (state = initialState, action) => {
-
     switch (action.type) {
-        case "ADD_PRODUCT_TO_FAVOURITES":
+        case "TOGGLE_FAVOURITE_PRODUCT":
             // remove if clicked second time
             if (state.favouriteProducts.find(i => i.id === action.product.id)) {
                 let newArr = state.favouriteProducts.filter(function (product) {
@@ -24,7 +22,6 @@ const favouritesReducer = (state = initialState, action) => {
                     
                 }
             }
-
             case "CLEAR_FAVOURITE_LIST":
                 return {
                     ...state,

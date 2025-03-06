@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { setProductToCompare, addProductToFavourites, addToCart} from "./../../actions/productsActions";
+import { setProductToCompare, toggleFavouriteProduct, addToCart} from "./../../actions/productsActions";
 import "./styles.scss";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
@@ -25,11 +25,10 @@ const ProductCard = (props) => {
   const addToCompare = (e, product) => {
     e.preventDefault();
     dispatch(setProductToCompare(product));
-
   }
   const addToFavourites = (e, product) => {
     e.preventDefault();
-    dispatch(addProductToFavourites(product));
+    dispatch(toggleFavouriteProduct(product));
   }
   const moveToCart = (e, product) => {
     e.preventDefault();
@@ -55,15 +54,12 @@ const ProductCard = (props) => {
                 <img src={favouritesList.find(item => item.id === product.id) ? StarFillBlack : StarFill} alt="favourite button"/>
             }
             </button>
-            
           </div>
-          
           <Card.Img
             className="product_image"
             variant="top"
             alt={product.title}
-            src={product.images && product.images.length ? product.images[0].downloadURL : Placeholder}
-          />
+            src={product.images && product.images.length ? product.images[0] : Placeholder}/>
           <Card.Body>
             <Card.Title className="product_title">
               <span>

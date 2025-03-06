@@ -1,44 +1,21 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFunctions, connectFunctionsEmulator } from "firebase/functions";
-import { getFirestore, connectFirestoreEmulator } from "firebase/firestore";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBCn2eCQJCCjbSBj01syJbQGxOb5OrU_co",
-  authDomain: "elektronika-cz.firebaseapp.com",
-  projectId: "elektronika-cz",
-  storageBucket: "elektronika-cz.firebasestorage.app",
-  messagingSenderId: "306673771823",
-  appId: "1:306673771823:web:d62ec2c573436c976dadda",
-  measurementId: "G-SH0V4HGXTZ"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
-// Initialize Firebase Auth provider
-const provider = new GoogleAuthProvider();
   
-// whenever a user interacts with the provider, we force them to select an account
-// provider.setCustomParameters({   
-//     prompt : "select_account "
-// });
-
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
 export const storage = initializeApp.storage;
 export const db = getFirestore(app);
-
-// if (process.env.NODE_ENV === 'development') {
-//   const functions = getFunctions(app);
-
-//   connectFunctionsEmulator(functions, 'localhost', 5001);
-
-//   connectFirestoreEmulator(db, 'localhost', 8080)
-//   console.log("flolodlsodlos");
-// }
-
-export const auth = getAuth();
-export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 export default getFirestore();

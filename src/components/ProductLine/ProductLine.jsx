@@ -9,12 +9,10 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
-import { Link } from "react-router-dom";
+import Placeholder from "../../assets/images/placeholder.jpg";
 
 const ProductLine = (props) => {
   const item = props.item;
-  console.log(props.index);
   const dispatch = useDispatch();
 
   const decreaseProductCart = (e, index) => {
@@ -28,21 +26,20 @@ const ProductLine = (props) => {
   return (
     <ListGroup.Item as="li" className="product_line">
       <Row className="product_line_row">
-        <Col xs={4}>
-          <img src={item.image} className="cart_image" />
+        <Col className="product_line_image">
+          <img src={item.images ? item.images[0] : Placeholder} className="cart_image" alt={'Obrazek - '+ item.title } />
         </Col>
-        <Col xs={5}>
+        <Col >
           <p>{item.title}</p>
         </Col>
-        <Col xs={1}>
+        <Col className="product_line_price">
           <b>{item.price}Kč</b>
         </Col>
-        <Col xs={2} className="product_line_quantity">
+        <Col className="product_line_quantity">
           <Button
             onClick={(e) => increaseProductCart(e, props.index)}
             variant="outline-success"
-            size="sm"
-          >
+            size="sm">
             +
           </Button>
           <p>{item.quantity}</p>

@@ -13,12 +13,10 @@ import { collection, getDocs, where, limit, query } from "firebase/firestore";
 import db from "../../firebase";
 
 const Home = () => {
-    // const [carouselData, setCarouselData] = useState([]);
     const [products, setProducts] = useState([]);
     const [isLoaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        // getHomeCarouselData();
         getCategory('chytre_telefony', 4);
         getCategory('notebooky', 4);
         getCategory('personalni_pocitace', 4);
@@ -39,15 +37,6 @@ const Home = () => {
       setProducts(current => [...current, object]);
       setLoaded(true);
     }
-    // async function getHomeCarouselData() {
-    //     let docsArray = [];
-    //     const collection_ref = collection(db, 'home_carousel');
-    //     const doc_refs = await getDocs(collection_ref).catch(error => {console.log(error)});;
-    //     doc_refs.docs.map((doc) => {
-    //         return docsArray.push(doc.data());
-    //     })
-    //     setCarouselData(docsArray.sort((a,b) => a.order - b.order));
-    // }
     return (
         <div className="home_container">
             <Carousel data-bs-theme="dark" interval={null}>

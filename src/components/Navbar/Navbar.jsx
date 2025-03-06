@@ -19,7 +19,7 @@ const Navigation = () => {
 
   const favouritesList = useSelector(state => state.favourites.favouriteProducts);
   const itemsToCompare = useSelector(state => state.compare.productsToCompare);
-  const cartLength = useSelector(state => state.cart.cartProducts.length);
+  const cartProducts = useSelector(state => state.cart.cartProducts);
 
   const searchChange = (e) => {
     setSearchQuery(e.target.value);
@@ -39,7 +39,7 @@ const Navigation = () => {
         <Link to="/" className="navbar_logotype navbar_logotype_desktop">
           <Navbar.Brand> 
             {/* <img src={Logo}/> */}
-            <span>VseProElektroniku</span>
+            <span>Elektronika CZ</span>
             </Navbar.Brand>
         </Link>
         <div className="d-flex wrap_special_nav_items">
@@ -52,8 +52,8 @@ const Navigation = () => {
             {itemsToCompare ? <span className="bubble">{itemsToCompare.length}</span> : null}
           </Link>
           <Link className="nav-item nav-link nav-item-with_bubble hide_on_mobile" to="/cart">
-            Cart
-            {itemsToCompare ? <span className="bubble">{cartLength}</span> : null}
+            Košík
+            {cartProducts ? <span className="bubble">{cartProducts.length}</span> : null}
           </Link>
         </div>
         
@@ -124,6 +124,10 @@ const Navigation = () => {
             <Link className="nav-item nav-link nav-item-with_bubble hide_on_desktop" to="/comparison">
               Porovnání
               {itemsToCompare ? <span className="bubble">{itemsToCompare.length}</span> : null}
+            </Link>
+            <Link className="nav-item nav-link nav-item-with_bubble hide_on_desktop" to="/cart">
+              Košík
+              {cartProducts ? <span className="bubble">{cartProducts.length}</span> : null}
             </Link>
             <Link className="nav-item nav-link" to="/about">
               Kontakty

@@ -32,9 +32,9 @@ export const clearCompareList = (product) => {
     }
 }
 
-export const addProductToFavourites = (product) => {
+export const toggleFavouriteProduct = (product) => {
     return {
-        type: "ADD_PRODUCT_TO_FAVOURITES",
+        type: "TOGGLE_FAVOURITE_PRODUCT",
         product
     }
 }

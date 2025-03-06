@@ -18,8 +18,28 @@
     }
     img {
         height: 100px;
+        max-width: 150px;
     }
-    .product_line_quantity {
-        
+    
+}
+@media screen and (max-width: 728px) {
+    .product_line {
+        .product_line_image {
+            display: none;
+        }
+        .product_line_price {
+            b {
+                font-size: 12px;
+
+            }
+        }
+        .product_line_quantity {
+            button {
+                padding: 5px;
+                line-height: 10px;
+            }
+        }
     }
+
+    
 }

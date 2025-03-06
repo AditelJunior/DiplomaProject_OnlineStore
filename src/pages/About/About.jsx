@@ -12,7 +12,7 @@ const About = () => {
         <li>+420 (703) 12 34 56</li>
         <li>+420 (779) 12 34 56</li>
         <li><b>Email:</b> elektronika_cz@seznam.cz</li>
-        <li><b>Instagram:</b> <a href="https://www.instagram.com/elektronika_cz/" target="_blank">@elektronika_cz</a></li>
+        <li><b>Instagram:</b> <a href="https://www.instagram.com/elektronika_cz/"  rel="noreferrer" target="_blank">@elektronika_cz</a></li>
       </ul>
       <div className="map_container">
       <iframe title='map'style={{width: '100%', height: '100%', border: 0}} frameBorder="0" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Vodi%C4%8Dkova%20701/31+(ElektronikaCZ)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>

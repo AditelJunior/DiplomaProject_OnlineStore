@@ -9,7 +9,7 @@ import { SUB_CATEGORIES_TRANSLATION } from "../../translations/translations";
 import "./styles.scss"
 
 
-const Home = () => {
+const Comparison = () => {
     const dispatch = useDispatch();
     const itemsToCompare = useSelector(state => state.compare.productsToCompare);
     const [propsToCompare, setPropsToCompare] = useState([]);
@@ -121,4 +121,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Comparison;

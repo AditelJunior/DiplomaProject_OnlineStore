@@ -16,23 +16,17 @@ const favouritesReducer = (state = initialState, action) => {
                     ...state,
                     productsToCompare: newArr
                 }
-
             } else if (state.productsToCompare.length < 4) {
-
                 return {
                     ...state,
-                    productsToCompare: [...state.productsToCompare, action.product]
-                    
+                    productsToCompare: [...state.productsToCompare, action.product]    
                 }
-                
             } else {
                 return {
                     ...state
                 }
-
             }
         case "REMOVE_PRODUCT_FROM_COMPARE":
-            
             let newArr = state.productsToCompare.filter(function (product) {
                 return product.id !== action.id;
             });

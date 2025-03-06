@@ -41,6 +41,7 @@ const Footer = () => {
                       className="nav-link"
                       href="https://www.google.com/"
                       target="_blank"
+                      rel="noreferrer" 
                     >
                       <Instagram /> @elektronika_cz
                     </a>
@@ -89,7 +90,7 @@ const Footer = () => {
         </section>
       </div>
       <div className="text-center p-3">
-        © 2025 Vývojář: <a target="_blank" href="https://www.linkedin.com/in/adilet-aitmatov/" className="text-white">Adilet Aitmatov</a>
+        © 2025 Vývojář: <a target="_blank" rel="noreferrer"  href="https://www.linkedin.com/in/adilet-aitmatov/" className="text-white">Adilet Aitmatov</a>
       </div>
     </footer>
   );

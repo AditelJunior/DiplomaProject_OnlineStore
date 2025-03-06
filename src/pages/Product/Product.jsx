@@ -16,7 +16,7 @@ import Placeholder from "../../assets/images/placeholder.jpg";
 import { getDoc, doc } from "firebase/firestore";
 import db from "../../firebase";
 import { PROPS_TRANSLATION } from "./../../translations/comparisonTranslations";
-import { setProductToCompare, addProductToFavourites, addToCart } from "./../../actions/productsActions";
+import { setProductToCompare, toggleFavouriteProduct, addToCart } from "./../../actions/productsActions";
 
 const Product = () => {
   const favouritesList = useSelector(state => state.favourites.favouriteProducts);
@@ -46,7 +46,7 @@ const Product = () => {
   }
   const addToFavourites = (e, product) => {
     e.preventDefault();
-    dispatch(addProductToFavourites(product));
+    dispatch(toggleFavouriteProduct(product));
   }
   const moveToCart = (e, product) => {
     e.preventDefault();
@@ -80,7 +80,7 @@ const Product = () => {
                         <button className="carousel_img_button" onClick={(e) => setActiveImage(image.downloadURL)}>
                           <img
                             className="carousel_img"
-                            src={image.downloadURL}
+                            src={image}
                             alt={'slide number ' + (i+1) + '; ' + product.title}
                           />
                         </button>

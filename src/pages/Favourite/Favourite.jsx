@@ -4,7 +4,7 @@ import ProductList from "../../components/ProductList/ProductList";
 import "./styles.scss"
 
 
-const Home = () => {
+const Favourite = () => {
     const favouritesList = useSelector(state => state.favourites.favouriteProducts);
     return (
         <div className="container">
@@ -14,4 +14,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Favourite;
